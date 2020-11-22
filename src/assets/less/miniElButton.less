@@ -1,0 +1,93 @@
+.mini-el-button{
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: @button-default-background-color;
+  border: @border-base;
+  border-color: @button-default-border-color;
+  color: @button-default-font-color;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: .1s;
+  font-weight: @button-font-weight;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  & + & {
+    margin-left: 10px;
+  }
+  &:hover,
+  &:focus{
+    background-color: @color-primary-light-9;
+    border-color: @color-primary-light-7;
+    color: @color-primary;
+  }
+  &:active{
+    border-color: mix(@color-black, @color-primary, @button-active-shade-percent);
+    color: mix(@color-black, @color-primary, @button-active-shade-percent);
+    outline: none;
+  }
+}
+
+.mini-el-button[disabled='disabled']{
+  &,
+  &:hover,
+  &:focus {
+    color: @button-disabled-font-color;
+    cursor: not-allowed;
+    background-image: none;
+    background-color: @button-disabled-background-color;
+    border-color: @button-disabled-border-color;
+  }
+
+  &.el-button--text {
+    background-color: transparent;
+  }
+
+  &.is-plain {
+    &,
+    &:hover,
+    &:focus {
+      background-color: @color-white;
+      border-color: @button-disabled-border-color;
+      color: @button-disabled-font-color;
+    }
+  }
+}
+
+.mini-el-button.is-circle{
+  border-radius: 50%;
+  padding: @button-padding-vertical;
+}
+
+.mini-el-button.is-round{
+  border-radius: 20px;
+  padding: 12px 23px;
+}
+
+.mini-el-button-primary{
+  .minibtn(@color-white,@color-primary,@color-white);
+}
+
+.mini-el-button-success{
+  .minibtn(@color-white, @color-success, @color-success);
+}
+
+.mini-el-button-info{
+  .minibtn(@color-white, @color-info, @color-info);
+}
+
+.mini-el-button-warning{
+  .minibtn(@color-white, @color-warning, @color-warning);
+}
+
+.mini-el-button-danger{
+  .minibtn(@color-white, @color-danger, @color-danger);
+}
