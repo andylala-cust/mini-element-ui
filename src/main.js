@@ -6,7 +6,9 @@ import router from './router'
 import './assets/less/reset/reset.less'
 import './assets/less/index.less'
 import miniEleHeader from '@/components/common/miniEleHeader'
+import miniElButton from '@/components/miniElButton/index'
 
+Vue.use(miniElButton)
 Vue.config.productionTip = false
 Vue.component('miniEleHeader', miniEleHeader)
 

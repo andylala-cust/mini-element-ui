@@ -7,6 +7,7 @@
         {'is-round': round},
         {'is-circle': circle}
       ]"
+      @click="handleButtonClick"
     >
       <span v-if="$slots.default">
         <slot></slot>
@@ -41,6 +42,11 @@ export default {
     },
     buttonSize () {
       return this.size ? `mini-el-button-${this.size}` : ''
+    }
+  },
+  methods: {
+    handleButtonClick (evt) {
+      this.$emit('click', evt)
     }
   }
 }

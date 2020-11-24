@@ -8,18 +8,19 @@
         <miniElButton
           type="primary"
           round
+          @click="handleClick"
         >开始</miniElButton>
       </div>
     </div>
 </template>
 
 <script>
-import miniElButton from '@/components/miniElButton/miniElButton'
-
 export default {
   name: 'introduce',
-  components: {
-    miniElButton
+  methods: {
+    handleClick () {
+      this.$router.push('/components')
+    }
   }
 }
 </script>
