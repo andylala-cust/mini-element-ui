@@ -1,0 +1,95 @@
+.mini-el-link{
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: @link-font-size;
+  font-weight: @link-font-weight;
+  &.is-underline{
+    &:hover:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 0;
+      bottom: 0;
+      border-bottom: 1px solid @link-default-active-color
+    }
+  }
+  &.is-disabled{
+    cursor: not-allowed;
+  }
+  &.mini-el-link-default{
+    color: @link-default-font-color;
+    &:hover {
+      color: @link-default-active-color
+    }
+    &:after {
+      border-color: @link-default-active-color
+    }
+    &.is-disabled{
+      color: @link-disabled-font-color;
+    }
+  }
+  &.mini-el-link-primary{
+    .minilink(@color-primary);
+    &.is-underline{
+      &:hover:after {
+        border-color: @color-primary;
+      }
+    }
+    &.is-disabled{
+      color: mix(@color-primary, @color-white, 50%)
+    }
+  }
+  &.mini-el-link-success{
+    .minilink(@color-success);
+    &.is-underline{
+      &:hover:after {
+        border-color: @color-success;
+      }
+    }
+    &.is-disabled{
+      color: mix(@color-success, @color-white, 50%)
+    }
+  }
+  &.mini-el-link-warning{
+    .minilink(@color-warning);
+    &.is-underline{
+      &:hover:after {
+        border-color: @color-warning;
+      }
+    }
+    &.is-disabled{
+      color: mix(@color-warning, @color-white, 50%)
+    }
+  }
+  &.mini-el-link-danger{
+    .minilink(@color-danger);
+    &.is-underline{
+      &:hover:after {
+        border-color: @color-danger;
+      }
+    }
+    &.is-disabled{
+      color: mix(@color-danger, @color-white, 50%)
+    }
+  }
+  &.mini-el-link-info{
+    .minilink(@color-info);
+    &.is-underline{
+      &:hover:after {
+        border-color: @color-info;
+      }
+    }
+    &.is-disabled{
+      color: mix(@color-info, @color-white, 50%)
+    }
+  }
+}

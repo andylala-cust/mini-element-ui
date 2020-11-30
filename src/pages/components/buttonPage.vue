@@ -68,6 +68,18 @@
         circle
       ></miniElButton>
     </div>
+    <div>
+      <miniElButton>默认按钮</miniElButton>
+      <miniElButton
+        size="medium"
+      >中等按钮</miniElButton>
+      <miniElButton
+        size="small"
+      >小型按钮</miniElButton>
+      <miniElButton
+        size="mini"
+      >超小按钮</miniElButton>
+    </div>
   </div>
 </template>
 

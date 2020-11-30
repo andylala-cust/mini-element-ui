@@ -91,3 +91,18 @@
 .mini-el-button-danger{
   .minibtn(@color-white, @color-danger, @color-danger);
 }
+.mini-el-button-medium{
+  .button-size(@button-medium-padding-vertical, @button-medium-padding-horizontal, @button-medium-font-size, @button-medium-border-radius);
+}
+.mini-el-button-small{
+  .button-size(@button-small-padding-vertical, @button-small-padding-horizontal, @button-small-font-size, @button-small-border-radius);
+  &.is-circle{
+    padding: @button-medium-padding-vertical;
+  }
+}
+.mini-el-button-mini{
+  .button-size(@button-mini-padding-vertical, @button-mini-padding-horizontal, @button-mini-font-size, @button-mini-border-radius);
+  &.is-circle{
+    padding: @button-mini-padding-vertical;;
+  }
+}
